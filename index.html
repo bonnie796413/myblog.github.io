@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonnie's Introduction</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--1. JQuery Events (事件處理)-->
+  <script>
+    $(document).ready(function () {
+      $("#img-click").mouseenter(function () {
+        alert("My favorite photo ~");
+      });
+    });
+  </script>
+  <!--2. JQuery Effects (效果)-->
+  <script>
+    $(document).ready(function () {
+      $("#toggle-button").click(function () {
+        $("#slide-paragraph").slideToggle();
+      });
+    });
+  </script>
+  <!--3. JQuery HTML/CSS (操作HTML/CSS)-->
+  <script>
+    $count = 0;
+    $t = $("#set-text").text();
+
+    $(document).ready(function () {
+      $("#txt").click(function () {
+        $count++;
+        $("#set-text").text($t +" "+ $count);
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <!--Header bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i class="fas fa-house-user"></i> Bonnie's Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <!--Main-->
+  <main class="container" style="padding: 1em;">
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <h4><i class="far fa-newspaper"></i> My favorite food</h4>
+
+          <!--Bootstrap img card-->
+          <div class="card mb-3" style="max-width: 720px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <img id="img-click" src="https://drive.google.com/uc?export=download&id=1gxisfRANjBKPbr9FTf2JGRfLEibbxYHV"
+                  class="card-img" alt="...">
+                <h3 style="color: #999999;">↑↑↑ Slip Me! ↑↑↑</h3>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title" id="txt"><i id="set-text" class="fas fa-user-alt"></i> ← There is Suprise! </h5>
+                  <p class="card-text">Hello! My name is Bonnie. Now study in Providence University. My major is
+                    <i>Computer
+                      Science and Information Management</i>. In class A. Grade 4. Will graduate in this year. I really
+                    love
+                    to chatting with others people. Wellcome to contact me Ow&lt; </p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <h4><i class="fas fa-info-circle"></i> Profile Introduction</h4>
+
+          <div class="card" style="width: 18rem;">
+            <img src="http://docs.google.com/uc?export=open&id=1BLPVYlCb_RPJemqQgLkFbbCiaNQTtO81" class="card-img-top"
+              alt="Author's Photo">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-user-alt"></i> 李汶諭</h5>
+              <p class="card-text" id="slide-paragraph">+ 有過打工經驗，願意接受調整<br>
+                + 有社團經營，能夠團隊合作、溝通<br>
+                + 學習力強，畢專做完全沒接觸過的領域2-3個月內能學以致用</p>
+              <a href="#" class="btn btn-primary" id="toggle-button">See info .</a>
+              <h5 style="color: #999999;">↑↑↑ Press Me! ↑↑↑</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="theGrid">
+        <!--第1列-->
+        <div>
+        <h2>個人資料</h2>
+        </div>
+        <div>
+          女、22歲、未婚
+        </div>
+        <!--第2列-->
+        <div>
+          <h2>就業狀態</h2>
+          </div>
+          <div>
+            待業中
+          </div>
+        <!--第3列-->
+        <div>
+          <h2>主要手機</h2>
+          </div>
+          <div>
+            0979-705779
+          </div>
+        <!--第4列-->
+        <div>
+          <h2>E-mail</h2>
+          </div>
+          <div>
+            <a>bonnie796413@gmail.com</a>
+          </div>
+        
+      </div>
+    </div>
+
+
+  </main>
+
+</body>
+
+</html>
